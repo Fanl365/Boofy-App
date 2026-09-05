@@ -1,3 +1,5 @@
+<p align="center"><img src="./assets/boofy-banner.svg" width="100%" alt="Boofy — Build · Connect · Grow" /></p>
+
 # Boofy App
 
 Boofy App is the frontend workspace for the Boofy DeFi project. This repository contains the user-facing application, wallet interactions, vault views, configuration, and supporting UI components.
