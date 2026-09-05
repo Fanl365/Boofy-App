@@ -1,0 +1,71 @@
+import { govPoolABI } from '../abi';
+
+export const metisStakePools = [
+  {
+    id: 'bifi-metis',
+    name: 'BIFI',
+    logo: 'single-assets/BIFI.png',
+    token: 'BIFI',
+    tokenDecimals: 18,
+    tokenAddress: '0xe6801928061CDbE32AC5AD0634427E140EFd05F9',
+    tokenOracle: 'tokens',
+    tokenOracleId: 'BIFI',
+    earnedToken: 'METIS',
+    earnedTokenDecimals: 18,
+    earnedTokenAddress: '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000',
+    earnContractAddress: '0x2a30C5e0d577108F694d2A96179cd73611Ee069b',
+    earnContractAbi: govPoolABI,
+    earnedOracle: 'tokens',
+    earnedOracleId: 'METIS',
+    partnership: false,
+    status: 'active',
+    fixedStatus: true,
+    partners: [
+      {
+        logo: 'stake/boofy/boofyfinance.png',
+        logoNight: 'stake/boofy/boofyfinance_night.png',
+        background: 'stake/boofy/background.png',
+        text: "Boofy Finance is The Multi-Chain Yield Optimizer across many sidechains, enabling users to earn autocompounded yield on their crypto. Did you know also that you can own a piece of Boofy itself? Boofy runs on its governance token, BIFI. The token has a set supply of 80,000 across all chains; no more may be minted, ever! As a holder of BIFI you may create and vote on important DAO proposals, and you become dividend-eligible to earn a share of every compounding harvest on Boofy vaults, hour by hour. Here on Metis, you just need to stake BIFI in this reward pool, or in the autocompounding BIFI Maxi vault on the main page. For this pool, Metis dividends are gathered and sent proportionally to each staker. Stake here, return later to claim the METIS you've earned.",
+        website: 'https://app.boofy.finance',
+        social: {
+          telegram: 'http://t.me/boofyfinance',
+          twitter: 'https://twitter.com/boofyfinance',
+        },
+      },
+    ],
+  },
+
+  {
+    id: 'moo_netswap-wbtc-metis-relay',
+    name: 'Relay Chain - Metis',
+    assets: ['WBTC', 'METIS'],
+    token: 'mooNetswapWBTC-METIS',
+    tokenDecimals: 18,
+    tokenAddress: '0x4e9E8A5Ce321cE0a380c1CEab388c673180AF657',
+    tokenOracle: 'lps',
+    tokenOracleId: 'netswap-wbtc-metis',
+    earnedToken: 'Metis',
+    earnedTokenDecimals: 18,
+    earnedTokenAddress: '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000',
+    earnContractAddress: '0xeD4ea30c755676C07d3e0e0f74Ff84C0193B4551',
+    earnContractAbi: govPoolABI,
+    earnedOracle: 'tokens',
+    earnedOracleId: 'METIS',
+    partnership: true,
+    status: 'active',
+    isMooStaked: true,
+    periodFinish: 1646996136,
+    partners: [
+      {
+        logo: 'stake/relay/logo.png',
+        background: 'stake/relay/bg.png',
+        text: 'Thanks to Metis’ close partnership with Relay Chain, the wrapped version of the largest and longest-running cryptocurrency is now available throughout the Andromeda network. To celebrate this partnership we are boosting this vault with extra $METIS tokens on top.',
+        website: 'https://app.relaychain.com/#/cross-chain-bridge-transfer',
+        social: {
+          telegram: 'https://t.me/relaychaincommunity',
+          twitter: 'https://twitter.com/relay_chain',
+        },
+      },
+    ],
+  },
+];

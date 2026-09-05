@@ -1,0 +1,11 @@
+@import 'variables/colors';
+@import 'variables/bootstrap-material-design-base';
+
+// import their vars after customization for use below
+$enable-flex: true; // fully adopt flexbox layouts
+
+// // Core Bootstrap Variables
+@import 'variables/functions';
+@import 'variables/variables';
+
+@import 'variables/bootstrap-material-design';

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#F9F3EB" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://use.typekit.net/avo8ruz.css"
+      media="nope!"
+      onload="this.media='all'"
+    />
+    <title>Boofy Finance</title>
+    <meta name="description" content="The Multichain Yield Optimizer" />
+
+    <meta property="og:local" content="en_US" />
+    <meta property="og:title" content="Boofy Finance" />
+    <meta property="og:description" content="The Multichain Yield Optimizer" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://app.boofy.finance" />
+    <meta property="og:image" content="https://boofy.finance/img/boofy.png" />
+
+    <script type="text/javascript">
+      var redirectMap = {
+        'heco.boofy.finance': 'https://app.boofy.finance/#/heco',
+        'avax.boofy.finance': 'https://app.boofy.finance/#/avax',
+        'polygon.boofy.finance': 'https://app.boofy.finance/#/polygon',
+        'fantom.boofy.finance': 'https://app.boofy.finance/#/fantom',
+        'harmony.boofy.finance': 'https://app.boofy.finance/#/harmony',
+        'arbitrum.boofy.finance': 'https://app.boofy.finance/#/arbitrum',
+        'celo.boofy.finance': 'https://app.boofy.finance/#/celo',
+        'moonriver.boofy.finance': 'https://app.boofy.finance/#/moonriver',
+        'cronos.boofy.finance': 'https://app.boofy.finance/#/cronos',
+        'aurora.boofy.finance': 'https://app.boofy.finance/#/aurora',
+        'fuse.boofy.finance': 'https://app.boofy.finance/#/fuse',
+        'metis.boofy.finance': 'https://app.boofy.finance/#/metis',
+        'moonbeam.boofy.finance': 'https://app.boofy.finance/#/moonbeam',
+        'emerald.boofy.finance': 'https://app.boofy.finance/#/emerald',
+      }
+      for (var host in redirectMap) {
+        if (host == window.location.host) {
+          window.location.assign(redirectMap[host]);
+        }
+      }
+    </script>
+    <script src="https://kit.fontawesome.com/67b38b6e65.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

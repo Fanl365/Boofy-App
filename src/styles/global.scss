@@ -1,0 +1,35 @@
+* {
+  font-family: 'proxima-nova', sans-serif !important;
+  text-rendering: optimizeLegibility;
+  box-shadow: none !important;
+}
+
+.fa,
+.far,
+.fas {
+  font-family: 'Font Awesome 5 Free' !important;
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands' !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fbf9f6;
+}
+
+.tooltip-toggle {
+  cursor: default;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
