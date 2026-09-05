@@ -1,29 +1,58 @@
-# Boofy Finance (\$BIFI)
+# Boofy App
 
-## Overview
+Boofy App is the frontend workspace for the Boofy DeFi project. This repository contains the user-facing application, wallet interactions, vault views, configuration, and supporting UI components.
 
-Official frontend repo of [boofy.finance](https://app.boofy.finance). Multichain yield farming optimizer.
+> **Development status:** active rebrand and engineering migration. Production domains, token symbols, contract addresses, and deployment identifiers are considered unverified until explicitly published by the Boofy team.
 
-## Env
+## Project goals
 
-Required env vars:
-```
-REACT_APP_NETWORK_ID = 56 // Network ID of BSC
-```
+- Provide a clean multichain DeFi user experience.
+- Integrate Boofy vault and strategy data from the Boofy API.
+- Keep wallet and chain interactions transparent and auditable.
+- Maintain a reusable frontend architecture for future Boofy products.
 
-## To Run to test against a local development server 
-```
+## Development
+
+```bash
 yarn
 yarn validate
 yarn start
 ```
-If any error is noted during validation, fix before starting the server, which will serve the app at http://localhost:3000/
 
+The local development server runs at `http://localhost:3000/` unless configured otherwise.
 
-## Contribute
+## Current work
 
-Boofy.Finance exists thanks to its contributors. There are many ways you can participate and help build high quality software. Check out the [contribution guide](CONTRIBUTING.md)!
+The project is moving through four active tracks:
+
+1. Boofy visual identity and application branding.
+2. Configuration cleanup and replacement of upstream deployment identifiers.
+3. API integration and multichain data validation.
+4. Test, build, and release hardening.
+
+See [ROADMAP.md](ROADMAP.md) and the repository Issues for current engineering work.
+
+## Repository history
+
+Boofy App preserves the upstream development history used as the technical foundation of this project. Historical commits retain their original authorship and dates; current Boofy development is tracked separately through new commits and issues.
+
+## Team
+
+- **Fan Long** — Co-Founder
+- **David Woo** — Developer
+- **Tyler Casselman** — Developer
+- **Albert Jones** — Developer
+
+See [BOOFY_TEAM.md](BOOFY_TEAM.md).
+
+## Contributing
+
+Contributions and technical reviews are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Migration notice
+
+Before using this code in production, read [BOOFY_MIGRATION_NOTICE.md](BOOFY_MIGRATION_NOTICE.md). Upstream addresses, transaction hashes, token identifiers, domains, and social references are not automatically valid Boofy production values.
 
 ## License
 
-[MIT](LICENSE)
+See [LICENSE](LICENSE).
