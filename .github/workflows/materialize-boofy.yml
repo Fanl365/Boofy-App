@@ -1,0 +1,31 @@
+name: Materialize Boofy App
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/materialize-boofy.yml'
+      - 'tools/materialize_boofy.py'
+permissions:
+  contents: write
+jobs:
+  materialize:
+    if: ${{ !contains(github.event.head_commit.message, '[materialized]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - run: |
+          cp tools/materialize_boofy.py /tmp/materialize_boofy.py
+          cp .github/workflows/materialize-boofy.yml /tmp/materialize-boofy.yml
+          git clone --depth 1 https://github.com/beefyfinance/beefy-app.git /tmp/upstream
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          rsync -a --exclude='.git' /tmp/upstream/ ./
+          rm -rf .github/workflows && mkdir -p .github/workflows
+          cp /tmp/materialize-boofy.yml .github/workflows/materialize-boofy.yml
+          mkdir -p tools && cp /tmp/materialize_boofy.py tools/materialize_boofy.py
+          python tools/materialize_boofy.py
+          git config user.name Boofy
+          git config user.email fanlong.365@gmail.com
+          git add -A
+          git commit -m 'chore: materialize complete Boofy App source tree [materialized]' || exit 0
+          git push origin HEAD:main
