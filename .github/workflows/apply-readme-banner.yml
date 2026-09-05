@@ -1,0 +1,25 @@
+name: Apply Boofy README banner
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/apply-readme-banner.yml']
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('readme.md')
+          s=p.read_text()
+          banner='<p align="center"><img src="./assets/boofy-banner.svg" width="100%" alt="Boofy — Build · Connect · Grow" /></p>\n\n'
+          if 'assets/boofy-banner.svg' not in s: p.write_text(banner+s)
+          PY
+          git config user.name Boofy
+          git config user.email fanlong.365@gmail.com
+          git add readme.md
+          git commit -m 'brand: feature Boofy banner in README' || true
+          git push
