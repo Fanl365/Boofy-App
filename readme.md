@@ -1,4 +1,4 @@
-<p align="center"><img src="./assets/boofy-banner.svg" width="100%" alt="Boofy — Build · Connect · Grow" /></p>
+<p align="center"><img src="./assets/boofy-banner.jpg" width="100%" alt="Boofy — Build · Connect · Grow" /></p>
 
 # Boofy App
 
